@@ -1,1 +1,9 @@
-/target/
+#maven
+*/target/**
+
+
+# Eclipse
+.classpath
+.project
+.settings/
+
