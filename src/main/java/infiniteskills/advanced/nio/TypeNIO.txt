@@ -1,0 +1,10 @@
+import java.io.*;
+import java.nio.*;
+import java.nio.channels.*;
+
+public class TypeNIO{
+	public static void main(String[] args) throws IOException{
+		int count;
+		File sourceFile = new File(args[0]);
+		FileChannel sourceChannel = new FileInputStream(sourceFile).getChannel();
+		try
