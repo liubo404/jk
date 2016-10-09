@@ -1,0 +1,13 @@
+@startuml 
+interface Iterable<E> {
+	Iterator<T> iterator()
+	void forEach(Consumer<? super T> action) 
+}
+interface Collection<E>
+
+
+ Iterable <|-- Collection
+
+
+
+@enduml
