@@ -1,0 +1,23 @@
+@startuml
+class TestThread {
+	+{static}void main(String[] args)
+}
+class T1 {
+	~Chat m
+	~String[] s1
+	+T1(Chat m1)
+	+void run()
+}
+interface Runnable {
+}
+Runnable <|.. T1
+class T2 {
+	~Chat m
+	~String[] s2
+	+T2(Chat m2)
+	+void run()
+}
+interface Runnable {
+}
+Runnable <|.. T2
+@enduml

@@ -1,13 +1,58 @@
 @startuml 
 interface Iterable<E> {
 	Iterator<T> iterator()
-	void forEach(Consumer<? super T> action) 
 }
+class ArrayList<E> {
+
+}
+
+class LinkedList<E>{
+
+}
+
+class HashSet<E>{
+
+}
+class LinkedHashSet<E>{
+}
+class TreeSet<E>{
+
+}
+
 interface Collection<E>
+interface BeanContext
+interface BeanContextServices
+interface BlockingDeque<E>
+interface BlockingQueue<E>
+interface Deque<E>
+interface List<E>
+interface NavigableSet<E>
+interface Queue<E>
+interface Set<E>
+interface SortedSet<E>
+interface TransferQueue<E>
 
 
- Iterable <|-- Collection
+
+Iterable <|-- Collection 
+
+Collection <|-- List
+Collection <|-- Set
+Collection <|-- Queue
 
 
+Queue <|-- Deque
+
+Set <|..HashSet
+Set <|-- SortedSet
+Set <|.. LinkedHashSet
+HashSet <|-- LinkedHashSet
+SortedSet <|-- NavigableSet
+NavigableSet <|..   TreeSet 
+
+
+List <|.. ArrayList
+List <|.. LinkedList
+Deque <|.. LinkedList
 
 @enduml

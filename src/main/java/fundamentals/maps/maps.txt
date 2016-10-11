@@ -1,9 +1,25 @@
 @startuml 
 
 interface Map<K,V>
-
+interface SortedMap<K,V>
+interface NavigableMap<K,V> 
  
- 
+class HashMap<K,V>{
+}
 
+class LinkedHashMap<K,V>{
+}
+
+class TreeMap<K,V>{
+}
+
+  
+Map <|.. HashMap
+Map <|.. LinkedHashMap
+HashMap <|-- LinkedHashMap 
+Map <|-- SortedMap 
+
+SortedMap <|-- NavigableMap
+NavigableMap <|.. TreeMap
 
 @enduml
