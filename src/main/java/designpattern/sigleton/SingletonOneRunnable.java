@@ -2,18 +2,16 @@ package designpattern.sigleton;
 
 public class SingletonOneRunnable implements Runnable {
 
-    private SingletonOne s;
+	public void run() {
+		SingletonOne.getInstance();
 
-    public SingletonOneRunnable(SingletonOne s) {
-        this.s = s;
-        new Thread(this).start();
-    }
+	}
 
+	private SingletonOne s;
 
-    @Override
-    public void run() {
-
-        SingletonOne.getInstance();
-    }
+	public SingletonOneRunnable(SingletonOne s) {
+		this.s = s;
+		new Thread(this).start();
+	}
 
 }
