@@ -22,5 +22,8 @@ public class ArrayListTest {
         alist.remove(a1);
         
         System.out.println(alist.size());
+        
+        
+        System.out.println("1".equals(String.valueOf(1)));
     }
 }
