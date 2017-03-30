@@ -1,17 +1,24 @@
 package ax.android;
 
+import lombok.Data;
+
 /**
  * Created by Thinkpad on 2017/3/30.
  *
  * https://github.com/mcharmas/android-parcelable-intellij-plugin
  *
+ * Usage
+
+ Just press ALT + Insert (or your equivalent keybinding for code generation) in your editor and select Parcelable. It allows you to select the fields to be parceled.
+ *
  */
 
-public class ParcelableCodeGeneration implements android.os.Parcelable {
+@Data
+public class ParcelableCodeGeneration  {
     private final String username;
     private final String password;
 
-    @Override
+    /*@Override
     public int describeContents() {
         return 0;
     }
@@ -40,5 +47,5 @@ public class ParcelableCodeGeneration implements android.os.Parcelable {
         public ParcelableCodeGeneration[] newArray(int size) {
             return new ParcelableCodeGeneration[size];
         }
-    };
+    };*/
 }
