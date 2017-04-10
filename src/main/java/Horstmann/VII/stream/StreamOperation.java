@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class StreamOperation {
     public static void main(String[] args) throws IOException {
-        String contents = new String(Files.readAllBytes(
+      /*  String contents = new String(Files.readAllBytes(
                  Paths.get("alice.txt")), StandardCharsets.UTF_8);
         List<String> words = Arrays.asList(contents.split("\\PL+"));
 
@@ -28,6 +28,6 @@ public class StreamOperation {
         System.out.println(count);
 
         count = words.parallelStream().filter(w -> w.length() > 12).count();
-        System.out.println(count);
+        System.out.println(count);*/
     }
 }
