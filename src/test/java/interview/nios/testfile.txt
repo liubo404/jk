@@ -1,0 +1,167 @@
+
+
+Search...
+NewsKnowledge Base DealsJob BoardAbout
+ Examples Java Code Geeks
+
+Android Core Java Desktop Java Enterprise Java Java Basics JVM Languages Software Development DevOps
+Home » Core Java » nio » Buffer » java.nio.Buffer Example
+About Prasad Saya
+Prasad Saya
+Prasad Saya is a software engineer with over ten years’ experience in application development, maintenance, testing and consulting on various platforms. He is a certified Java and Java EE developer. At present his interest is in developing Java applications. He also has experience working with databases and ERP applications.
+
+java.nio.Buffer Example
+Posted by: Prasad Saya  in Buffer January 20th, 2015
+
+
+This article introduces the Buffer class and its basic usage. This class is defined in the java.nio package.
+A buffer is a container for a fixed amount of data of a specific primitive type. There is one subclass of this class for each primitive type, except boolean. They are ByteBuffer, CharBuffer, DoubleBuffer, FloatBuffer, IntBuffer, LongBuffer and ShortBuffer classes. These are also defined in the java.nio package.
+The example programs use byte buffer and char buffer classes as buffers are created and used as one of the subclasses. The examples are compiled and run in Windows OS environment. Note that Java SE 7 is required to run the code.
+Essential properties
+Capacity: This is the number of elements it contains.
+Position: This is the index of the next element to be read or written.
+Limit: This is the index of the first element that should not be read or written.
+There are methods to examine these properties: capacity(), position() and limit().
+Creating a buffer
+A buffer can be created by invoking one of the static methods of its subclasses.
+The allocate() method creates a buffer with its specified initial capacity. The wrap() method wraps an existing byte array into it and creates a buffer.
+Transferring data
+There are get() and put() methods of the subclasses for moving data out of and in to a buffer. Data may also be transferred in to or out of a buffer by the I/O operations of an appropriate channel. Channel classes are defined in java.nio.channels package.
+Buffer operations
+Buffer class defines methods for clearing, flipping, and rewinding, for marking the current position, and for resetting the position to the previous mark.
+Read only buffer
+The buffer subclasses can be created as read only buffers by invoking the class’s asReadOnlyBuffer() method.
+Direct buffers
+A buffer can be allocated as a direct buffer.
+For a direct buffer, the Java virtual machine will make a best effort to perform native I/O operations directly upon it. That is, it will attempt to avoid copying the buffer’s content to (or from) an intermediate buffer before (or after) each invocation of one of the underlying operating system’s native I/O operations.
+A direct buffer may be created by invoking the allocateDirect() factory method of a buffer subclass.
+Also, see an example of Java Direct ByteBuffer.
+Thread safety
+Buffers are not safe for use by multiple concurrent threads. If a buffer is to be used by more than one thread, then access to the buffer should be controlled by appropriate synchronization.
+1. Example 1
+This example shows buffer’s basic operations: creating, writing to and reading from a buffer, and verifying its contents. The example uses a CharBuffer.
+1.1. Create buffer
+1
+CharBuffer buffer = CharBuffer.allocate(8);
+The above code snippet creates a char buffer of 8 character initial capacity. The capacity() method, if invoked, returns the value 8.
+The new buffer’s position will be zero, its limit will be its capacity, its mark will be undefined, and each of its elements will be initialized to zero. It will have a backing array, and its array offset will be zero.
+1.2. Write to the buffer
+A text string is written to the buffer, one character at a time.
+1
+String text = "apple";
+2
+
+3
+for (int i = 0; i < text.length(); i++) {
+4
+
+5
+    char c = text.charAt(i);
+6
+    buffer.put(c);
+7
+}
+The put() method of the char buffer is invoked to write a character input to the buffer. This writes at the current position and then increments the position.
+NOTE: There is also a bulk put() method which takes a character array (char []) as input parameter, and writes the array contents to the buffer.
+1.3. Verify the position
+1
+int buffPos = buffer.position();
+The value will be 5, after the put operation.
+1.4. Read buffer contents
+1
+buffer.flip();
+Buffer’s flip() method sets the limit to the current position (i.e., 5) and the position is set to zero. This operation is required to read the buffer from the initial position.
+Read the buffer contents, one character at a time, by invoking char buffer’s get() method.
+1
+while (buffer.hasRemaining()) {
+2
+
+3
+    System.out.println(buffer.get());
+4
+}
+NOTE: There is also a bulk get() method which takes a character array (char []) as input parameter, and reads the buffer contents into to the array.
+The following is the example program’s complete code and its output.
+1.5. The code
+BufferExample1.java
+01
+import java.nio.CharBuffer;
+02
+
+03
+public class BufferExample1 {
+04
+
+05
+    public static void main (String [] args) {
+06
+
+07
+        CharBuffer buffer = CharBuffer.allocate(8);
+08
+
+09
+        String text = "apple";
+10
+        System.out.println("Input text: " + text);
+11
+
+12
+        for (int i = 0; i < text.length(); i++) {
+13
+
+14
+            char c = text.charAt(i);
+15
+            buffer.put(c);
+16
+        }
+17
+
+18
+        int buffPos = buffer.position();
+19
+        System.out.println("Position after data is written into buffer: " + buffPos);
+20
+
+21
+        buffer.flip();
+22
+
+23
+        System.out.println("Reading buffer contents:");
+24
+
+25
+        while (buffer.hasRemaining()) {
+26
+
+27
+            System.out.println(buffer.get());
+28
+        }
+29
+    }
+30
+}
+1.6. The output
+1
+Input text: apple
+2
+Position after data is written into buffer: 5
+3
+Reading buffer contents:
+4
+a
+5
+p
+6
+p
+7
+l
+8
+e
+2. Example 2
+This example shows usage of ByteBuffer with a FileChannel.
+Byte buffers are distinguished from other buffers in that they can be used as the sources and targets of I/O operations. A file channel is a channel for reading, writing and manipulating a file. This channel reads a file into a given byte buffer and writes to a file from a buffer.
+The following is the example program’s complete code and its output.

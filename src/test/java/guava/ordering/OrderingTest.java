@@ -81,8 +81,7 @@ public class OrderingTest {
      */
     @Test
     public void nuls_test() {
-        List<String> random = Lists.newArrayList(null, "welcome", "to",
-                "leveluplunch", null, null);
+        List<String> random = Lists.newArrayList(null, "welcome", "to", "leveluplunch", null, null);
         System.out.println(Ordering.from(byLength).nullsLast().sortedCopy(random));
     }
 
@@ -90,12 +89,10 @@ public class OrderingTest {
      * leastOf/greatestOf
      */
     @Test
-    public void least_of(){
-        List<String> random = Lists.newArrayList(null, "welcome", "to",
-                "leveluplunch", null, null);
+    public void least_of() {
+        List<String> random = Lists.newArrayList(null, "welcome", "to", "leveluplunch", null, null);
 
-        List<String> firstTwo = Ordering.from(byLength).nullsLast()
-                .leastOf(random, 1);
+        List<String> firstTwo = Ordering.from(byLength).nullsLast().leastOf(random, 1);
 
         System.out.println(firstTwo);
     }
