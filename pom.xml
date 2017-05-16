@@ -102,9 +102,14 @@
 			<artifactId>guava</artifactId>
 			<version>21.0</version>
 		</dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.7</version>
+        </dependency>
 
 
-	</dependencies>
+    </dependencies>
 	<properties>
 		<spring.version>4.3.2.RELEASE</spring.version>
 	</properties>
