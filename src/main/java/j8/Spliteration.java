@@ -16,14 +16,14 @@ public class Spliteration {
     public static void main(String[] args) {
         Path path = Paths.get("D:\\gitest\\jk\\src\\main\\java\\j8\\people.txt");
 
-        try(Stream<String>  lines = Files.lines(path)){
+        try (Stream<String> lines = Files.lines(path)) {
 
             Spliterator<String> lineSpliterator = lines.spliterator();
             Spliterator<Person> personSpliterator = new PersonSpliterator(lineSpliterator);
 
-            Stream<Person> people = StreamSupport.stream(personSpliterator,false);
+            Stream<Person> people = StreamSupport.stream(personSpliterator, false);
             people.forEach(System.out::println);
-        }catch(IOException ioe){
+        } catch (IOException ioe) {
             ioe.printStackTrace();
         }
     }

@@ -1,16 +1,10 @@
 package j8;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.function.Supplier;
-
 /**
  * User: liubo
  * Datetime: 2017/6/2817:52
  */
 public class Demo {
-
-
 
 
     public static void main(String[] args) {

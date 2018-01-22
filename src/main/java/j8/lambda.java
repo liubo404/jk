@@ -8,7 +8,7 @@ public class lambda {
     public static void main(String[] args) {
         final int answer = 42;
         Thread t = new Thread(
-                ()-> System.out.printf("The answer is "+ answer)
+                () -> System.out.printf("The answer is " + answer)
         );
     }
 }

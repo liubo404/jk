@@ -16,10 +16,10 @@ public class SMFactory {
         map.put("RACTANGLE", Ractangle::new);
     }
 
-    public Shape getShape(String shapeType){
+    public Shape getShape(String shapeType) {
         Supplier<Shape> shape = map.get(shapeType.toUpperCase());
-        if(shape !=null){
-            return  shape.get();
+        if (shape != null) {
+            return shape.get();
         }
         throw new IllegalArgumentException("No such shape " + shapeType.toUpperCase());
     }
