@@ -18,7 +18,19 @@ public class ParcelableCodeGeneration  {
     private final String username;
     private final String password;
 
-    /*@Override
+    public ParcelableCodeGeneration(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+/*@Override
     public int describeContents() {
         return 0;
     }

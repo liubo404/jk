@@ -20,6 +20,22 @@ public class Descriptions {
 
     private List<String> details;
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public List<String> getDetails() {
+        return details;
+    }
+
+    public void setDetails(List<String> details) {
+        this.details = details;
+    }
+
     public static void main(String[] args) {
         Descriptions d = new Descriptions();
         d.setTitle("新款商品");

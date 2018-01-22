@@ -14,12 +14,13 @@ public class Book implements Comparable<Book> {
     private String author;
 
     public int compareTo(Book o) {
-        if (this.id == o.getId()) {
+        return 0;
+       /* if (this.id == o.getId()) {
             return 0;
         } else if (this.id > o.getId()) {
             return 1;
         }else{
             return -1;
-        }
+        }*/
     }
 }

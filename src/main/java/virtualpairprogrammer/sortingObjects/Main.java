@@ -1,9 +1,5 @@
 package virtualpairprogrammer.sortingObjects;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * Created by Thinkpad on 2017/4/9.
  *
@@ -11,7 +7,7 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args){
-        List<Book> books = new ArrayList<Book>();
+      /*  List<Book> books = new ArrayList<Book>();
         books.add(new Book(1,"The lord of Rings","J.R.R.Tolkien"));
         books.add(new Book(2,"White Whale","Jack London"));
         books.add(new Book(3,"Hobbits","J.R.R.Tolkien"));
@@ -24,6 +20,6 @@ public class Main {
 
         for(Book b : books){
             System.out.println(b);
-        }
+        }*/
     }
 }
