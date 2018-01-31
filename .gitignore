@@ -271,3 +271,15 @@ node_modules/
 dist/
 
 # End of https://www.gitignore.io/api/svn,git,java,maven,windows,eclipse,java-web,intellij,intellij+iml,intellij+all
+depth/ch2/src/main/resources/
+depth/ch2/src/test/
+src/main/docs/elk/grok-patterns
+src/main/docs/m4p/
+xxx-jpa/jpa/.gitignore
+xxx-jpa/jpa/.mvn/
+xxx-jpa/jpa/mvnw
+xxx-jpa/jpa/mvnw.cmd
+xxx-jpa/jpa/pom.xml
+xxx-jpa/jpa/src/main/java/xxx/com/jpa/JpaApplication.java
+xxx-jpa/jpa/src/main/resources/application.yml
+xxx-jpa/jpa/src/test/
