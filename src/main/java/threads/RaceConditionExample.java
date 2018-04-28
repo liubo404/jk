@@ -21,9 +21,9 @@ public class RaceConditionExample {
 
         Counter counter = new Counter();
 
-        IntStream.range(0,1000).forEach(i->{
+        for(int i = 0; i < 1000; i++) {
             executorService.submit(() -> counter.increment());
-        });
+        }
 
         executorService.shutdown();
         executorService.awaitTermination(60, TimeUnit.SECONDS);
