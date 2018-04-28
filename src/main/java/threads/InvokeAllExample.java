@@ -13,11 +13,11 @@ public class InvokeAllExample {
             return "Result of Task1";
         };
         Callable<String> task2 = ()->{
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             return "Result of Task2";
         };
         Callable<String> task3 = ()->{
-            Thread.sleep(2000);
+            Thread.sleep(5000);
             return "Result of Task3";
         };
 
