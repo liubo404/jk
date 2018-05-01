@@ -22,7 +22,7 @@ public class HelloConfig {
 
         String text = (String) context.getBean("greeting");
 
-        System.out.println("args = [" +  text  + "]");
+        System.out.println("Hello " + text );
 
     }
 }

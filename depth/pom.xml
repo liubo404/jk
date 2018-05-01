@@ -11,6 +11,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>ch2</module>
+        <module>poi</module>
     </modules>
     <artifactId>depth</artifactId>
 
