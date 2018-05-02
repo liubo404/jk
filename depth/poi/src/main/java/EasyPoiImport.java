@@ -97,6 +97,7 @@ public class EasyPoiImport {
         courses.add(c);
 
         ExportParams exportParams = new ExportParams("课程表", "课程表");
+
         Workbook workbook = ExcelExportUtil.exportExcel(exportParams, Course.class,courses);
         FileOutputStream fos = new FileOutputStream("/home/ben/doc/课程.xls");
         workbook.write(fos);
