@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wd-table>
+    <from-table-name>tb_action</from-table-name>
+    <to-table-name>t_action</to-table-name>
+    <column-map>
+        <column-relation>ManyToOne</column-relation>
+        <from>
+            <column-name>name</column-name>
+            <column-type>String</column-type>
+        </from>
+        <from>
+            <column-name>name2</column-name>
+            <column-type>String</column-type>
+        </from>
+        <to>
+            <column-name>name3</column-name>
+            <column-type>String</column-type>
+        </to>
+    </column-map>
+    <column-map>
+        <column-relation>OneToMany</column-relation>
+        <from>
+            <column-name>name4</column-name>
+            <column-type>String</column-type>
+        </from>
+        <to>
+            <column-name>name5</column-name>
+            <column-type>String</column-type>
+        </to>
+        <to>
+            <column-name>name6</column-name>
+            <column-type>String</column-type>
+        </to>
+    </column-map>
+    <column-map>
+        <column-relation>OneToOne</column-relation>
+        <from>
+            <column-name>name7</column-name>
+            <column-type>String</column-type>
+        </from>
+        <to>
+            <column-name>name8</column-name>
+        </to>
+    </column-map>
+</wd-table>

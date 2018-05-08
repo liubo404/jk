@@ -22,6 +22,7 @@
     <modules>
         <module>xxx-jpa</module>
         <module>depth</module>
+        <module>xml</module>
     </modules>
 
     <dependencies>
