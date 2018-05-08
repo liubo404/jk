@@ -7,6 +7,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
 
+/**
+ * http://www.mkyong.com/java/java-read-a-file-from-resources-folder/
+ * https://howtodoinjava.com/core-java/io/read-file-from-resources-folder/
+ *
+ * https://java2blog.com/read-file-from-resources-folder-in-java/
+ */
 public class ReadFileTest {
 
     public static void main(String[] args) throws IOException {

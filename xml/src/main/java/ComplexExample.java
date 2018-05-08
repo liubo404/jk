@@ -9,6 +9,8 @@ import java.util.List;
 
 /**
  * http://www.itcuties.com/java/xstream-complex-example/
+ *
+ * https://stackoverflow.com/questions/4077071/how-to-convert-list-of-object-to-xml-doc-using-xstream
  */
 @XStreamAlias("complex-example")
 public class ComplexExample {

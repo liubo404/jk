@@ -11,6 +11,10 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 
+/**
+ * https://blog.csdn.net/xtj332/article/details/17606277
+ * https://www.tutorialspoint.com/xstream/xstream_object_streams.htm
+ */
 
 public class XStreamTester {
     public static void main(String args[]) {
