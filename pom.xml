@@ -24,6 +24,7 @@
         <module>depth</module>
         <module>xml</module>
         <module>mapper</module>
+        <module>threads</module>
     </modules>
 
     <dependencies>
