@@ -25,6 +25,7 @@
         <module>xml</module>
         <module>mapper</module>
         <module>threads</module>
+        <module>snippets</module>
     </modules>
 
     <dependencies>
